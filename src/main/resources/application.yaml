@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: weather-service
+
+  #-------------------------------------------------------------------------------------------------
+  # Работа с БД
+  #-------------------------------------------------------------------------------------------------
+
+  datasource:
+    url: jdbc:postgresql://${HOST}:${PORT}/${DB_NAME}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
+      schema-locations: "classpath*:scripts/schema.sql"
+
+  jpa:
+    database: postgresql
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: none
+
+#-------------------------------------------------------------------------------------------------
+# Сервер
+#-------------------------------------------------------------------------------------------------
+
+server:
+  port: 8080
+
+#-------------------------------------------------------------------------------------------------
+# Внешние сервисы
+#-------------------------------------------------------------------------------------------------
+
+weather:
+  service:
+    url: ${SERVICE_URL}
+  api:
+    url: ${WEATHER_API_URL}
+    key: ${API_KEY}
+
+
+#-------------------------------------------------------------------------------------------------
+# Logging
+#-------------------------------------------------------------------------------------------------
+
+logging:
+  level:
+    org:
+      springframework: INFO
+
+vaadin:
+  launch-browser: true
