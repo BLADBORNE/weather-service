@@ -1,5 +1,6 @@
 package com.weatherservice.application.backend.controller.error;
 
+import com.weatherservice.application.backend.exceprion.APIKeyIsNotValidException;
 import com.weatherservice.application.backend.model.ApiError;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,25 @@ import java.time.LocalDateTime;
 @RestControllerAdvice
 @Slf4j
 public class WeatherServiceErrorHandler {
+
+    /**
+     * <p>Обработчик UNAUTHORIZED.</p>
+     *
+     * @return модель исключения {@link ApiError}.
+     */
+    @ExceptionHandler(APIKeyIsNotValidException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    public ApiError handleAPIKeyIsNotValidException(final APIKeyIsNotValidException e) {
+
+        log.error("{}: {}", "Невалидный API ключ или несанкционированный доступ.", e.getMessage());
+
+        return new ApiError(
+                HttpStatus.UNAUTHORIZED.getReasonPhrase(),
+                "Невалидный API ключ.",
+                e.getMessage(),
+                LocalDateTime.now()
+        );
+    }
 
     /**
      * <p>Обработчик INTERNAL_SERVER_ERROR.</p>

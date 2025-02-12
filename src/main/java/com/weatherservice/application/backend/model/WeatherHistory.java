@@ -23,7 +23,7 @@ import java.util.UUID;
 @Table(name = "weather_history")
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
-public class WeatherHistory {
+public final class WeatherHistory {
 
     /**
      * <p>Идентификатор.</p>

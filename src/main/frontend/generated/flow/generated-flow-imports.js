@@ -16,6 +16,7 @@ import '@vaadin/checkbox/src/vaadin-checkbox.js';
 import 'Frontend/generated/jar-resources/gridConnector.ts';
 import '@vaadin/text-field/src/vaadin-text-field.js';
 import 'Frontend/generated/jar-resources/lit-renderer.ts';
+import '@vaadin/notification/src/vaadin-notification.js';
 import '@vaadin/common-frontend/ConnectionIndicator.js';
 import '@vaadin/vaadin-lumo-styles/color-global.js';
 import '@vaadin/vaadin-lumo-styles/typography-global.js';

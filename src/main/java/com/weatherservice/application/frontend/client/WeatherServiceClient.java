@@ -16,7 +16,7 @@ import java.util.List;
  * <p>Клиент для получения информации о погоде через сервис погоды.</p>
  */
 @Component
-public class WeatherServiceClient {
+public final class WeatherServiceClient {
 
     /**
      * <p>Клиент.</p>

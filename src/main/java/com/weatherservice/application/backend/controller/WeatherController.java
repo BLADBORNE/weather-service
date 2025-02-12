@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping("/weather")
 @RequiredArgsConstructor
 @Slf4j
-public class WeatherController {
+public final class WeatherController {
 
     /**
      * <p>Сервис погоды.</p>

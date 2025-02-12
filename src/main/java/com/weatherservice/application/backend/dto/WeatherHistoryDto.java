@@ -11,7 +11,7 @@ import java.time.LocalTime;
  */
 @Getter
 @Builder
-public class WeatherHistoryDto {
+public final class WeatherHistoryDto {
 
     /**
      * <p>Широта.</p>

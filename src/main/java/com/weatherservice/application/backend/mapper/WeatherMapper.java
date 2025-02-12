@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * <p>Маппер истории погоды {@link WeatherHistoryDto} и {@link WeatherDto}.</p>
  */
-public class WeatherMapper {
+public final class WeatherMapper {
 
     /**
      * <p>Преобразует JSON-ответ от API погоды в объект {@link WeatherDto}.</p>

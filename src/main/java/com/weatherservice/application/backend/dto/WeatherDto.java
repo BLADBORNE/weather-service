@@ -8,7 +8,7 @@ import lombok.Getter;
  */
 @Getter
 @Builder
-public class WeatherDto {
+public final class WeatherDto {
 
     /**
      * <p>Погода.</p>

@@ -11,7 +11,7 @@ import reactor.core.publisher.Mono;
  */
 @Component
 @RequiredArgsConstructor
-public class WeatherApiClient {
+public final class WeatherApiClient {
 
     /**
      * <p>Клиент.</p>
